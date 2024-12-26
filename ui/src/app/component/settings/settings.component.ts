@@ -1,15 +1,12 @@
-import { Component, ViewChild, TemplateRef } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { ProfileComponent } from "./profile/profile.component";
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-settings',
   standalone: true,
-  imports: [RouterOutlet, ProfileComponent],
+  imports: [],
   templateUrl: './settings.component.html',
   styleUrl: './settings.component.css'
 })
 export class SettingsComponent {
-  @ViewChild('childTemplate', {static: true}) childTemplate!: TemplateRef<any>;
 
 }
