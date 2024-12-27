@@ -17,6 +17,13 @@ public class UserController {
         this.userService = userService;
     }
 
+    @PostMapping("/authenticate")
+    public ResponseEntity<String> authenticateUser(@RequestBody User user){
+        boolean authenticated = userService.authenticateUser(user);
+        if(authenticated) return ResponseEntity.ok("User authenticated");
+        return ResponseEntity.notFound().build();
+    }
+
     @GetMapping("/{userName}")
     public User getUserByUserName(@PathVariable("userName") String userName){
         return userService.getUserByUserName(userName);

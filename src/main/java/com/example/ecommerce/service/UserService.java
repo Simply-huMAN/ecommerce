@@ -16,6 +16,14 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
+    public boolean authenticateUser(User user){
+        User userFromDb = userRepository.findByEmailAndPassword(user.getEmail(), user.getPassword());
+        if(userFromDb != null){
+            return true;
+        }
+        return false;
+    }
+
     public User getUserByUserName(String userName){
         return userRepository.findByUsername(userName);
     }
