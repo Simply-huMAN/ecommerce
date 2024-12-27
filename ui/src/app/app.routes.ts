@@ -5,13 +5,16 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { ProfileComponent } from './component/profile/profile.component';
 import { SettingsComponent } from './component/settings/settings.component';
 import { OverviewComponent } from './component/overview/overview.component';
+import { LoginComponent } from './component/login/login.component';
 
 export const routes: Routes = [
   { path: 'register', component: RegistrationComponent },
+  { path: 'login', component: LoginComponent },
   { 
     path: 'dashboard', component: DashboardComponent,
     children: [
-      { path: '', redirectTo: 'overview', pathMatch: 'full' },
+      // { path: '', redirectTo: 'overview'
+      // , pathMatch: 'full' },
       { path: 'overview', component: OverviewComponent },
       { path: 'profile', component: ProfileComponent },
       { path: 'settings', component: SettingsComponent }
