@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="product-card-container">
+        <mat-card *ngFor="let product of products" class="product-card">
+            <mat-card-header>
+                <mat-card-title>{{product.productName}}</mat-card-title>
+                <mat-card-subtitle>{{product.productCategory}}</mat-card-subtitle>
+            </mat-card-header>
+
+            <mat-card-content>
+                <img src="https://www.shutterstock.com/image-photo/laptop-notebook-isolated-on-transparent-600nw-2440529333.jpg" alt="product image" width="200">
+            </mat-card-content>
+
+            <mat-card-actions>
+                <button mat-raised-button color="primary">Buy</button>
+                <button mat-raised-button color="primary">Add to Cart</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

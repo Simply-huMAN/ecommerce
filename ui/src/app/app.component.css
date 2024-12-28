@@ -1,7 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Finlandica:wght@400..700&display=swap');
 *{
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: 'Finlandica', sans-serif;
 }
+
+.header-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #efefef;
+}
+
+.header-brand-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-brand-section span{
+  font-weight: 500;
+  margin: 0 0.5rem;
+  font-size: 1.25em;
+}
+
+.header-links-section{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.drawer-container{
+  height: 100vh;
+}
+
+.list-item{
+  margin: 0 1rem;
+  list-style: none;
+  /* background-color: #126ae5; */
+}
+
+.active {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #007bff;
+}
+
+a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #007bff;
+  transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .header-links-section{
+    display: none;
+  }
+}
+

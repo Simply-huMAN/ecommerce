@@ -1,1 +1,30 @@
-<router-outlet />
+<div class="header-section">
+    <div class="header-brand-section">
+        <button (click)="toggleDrawer()"><img src="./././assets/menu_24dp.svg" height="18" width="18" alt="menu icon"></button>
+        <span>eCommerce</span>
+    </div>
+    
+    <ul class="header-links-section">
+        <li class="list-item"><a routeLink="overview">Shop</a></li>
+        <li class="list-item"><a routeLink="overview">Shop</a></li>
+        <li class="list-item"><a routeLink="overview">Shop</a></li>
+        <li class="list-item"><a routeLink="overview">Shop</a></li>
+    </ul>
+</div>
+
+<mat-drawer-container class="drawer-container">
+    <mat-drawer mode="over" [opened]="isOpen" class="drawer-section">
+        <mat-nav-list>
+            <a mat-list-item routerLink="/overview" routerLinkActive="active"><img src="./././assets/person_24dp.svg" height="20" width="20" alt="overview icon"> Overview</a>
+            <a mat-list-item routerLink="/profile" routerLinkActive="active"><img src="./././assets/person_24dp.svg" height="20" width="20" alt="profile icon"> Profile</a>
+            <a mat-list-item routerLink="/account" routerLinkActive="active"><img src="./././assets/group_24dp.svg" height="20" width="20" alt="account icon"> Account</a>
+            <a mat-list-item routerLink="/purchase-history" routerLinkActive="active"><img src="./././assets/local_mall_24dp.svg" height="20" width="20" alt="history icon"> Purchase History</a>
+            <a mat-list-item routerLink="/settings" routerLinkActive="active"><img src="./././assets/settings_24dp.svg" height="20" width="20" alt="settings icon"> Settings</a>
+            <a mat-list-item routerLink="/security" routerLinkActive="active"><img src="./././assets/security_24dp.svg" height="20" width="20" alt="security icon"> Security</a>
+        </mat-nav-list>
+    </mat-drawer>
+
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>

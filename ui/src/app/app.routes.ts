@@ -6,6 +6,7 @@ import { ProfileComponent } from './component/profile/profile.component';
 import { SettingsComponent } from './component/settings/settings.component';
 import { OverviewComponent } from './component/overview/overview.component';
 import { LoginComponent } from './component/login/login.component';
+import { ShopComponent } from './component/shop/shop.component';
 
 export const routes: Routes = [
   { path: 'register', component: RegistrationComponent },
@@ -21,4 +22,8 @@ export const routes: Routes = [
     ]
   },
   { path: 'products', component: ProductsComponent },
+  { path: 'overview', component: OverviewComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'settings', component: SettingsComponent },
+  { path: 'shop', component: ShopComponent }
 ];
