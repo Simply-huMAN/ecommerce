@@ -5,34 +5,39 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { RouterModule } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-shop',
+  selector: 'app-product',
   standalone: true,
   imports: [CommonModule, HttpClientModule, RouterModule , MatCardModule, MatButtonModule, MatProgressSpinnerModule],
-  templateUrl: './shop.component.html',
-  styleUrl: './shop.component.css'
+  templateUrl: './product.component.html',
+  styleUrl: './product.component.css'
 })
-export class ShopComponent implements OnInit {
+export class ProductComponent implements OnInit {
   fetching = true;
-  products: Product[] = [];
+  product: Product | null = null;
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient, private route: ActivatedRoute) {}
 
   ngOnInit() {
-    console.log(`Loading products...`)
-    this.fetchProducts();
-    console.log(this.products);
+    this.route.paramMap.subscribe(params => {
+      const productId = params.get('productId');
+      if(productId){
+        console.log(`Loading product ${productId}...`)
+        this.fetchProduct(productId);
+      }
+    }, error => {
+      console.log(error);
+    });
   }
 
-  fetchProducts(){
-    this.httpClient.get('http://localhost:8080/products')
+  fetchProduct(productId: string){
+    this.httpClient.get('http://localhost:8080/products/' + productId)
       .subscribe((response) => {
         console.log(response);
-        this.products = response as Product[];
+        this.product = response as Product;
         this.fetching = false;
-        console.log(this.products);
       }, error => {
         console.log(error);
         this.fetching = false;

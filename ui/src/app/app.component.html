@@ -5,22 +5,23 @@
     </div>
     
     <ul class="header-links-section">
-        <li class="list-item"><a routeLink="overview">Shop</a></li>
-        <li class="list-item"><a routeLink="overview">Shop</a></li>
-        <li class="list-item"><a routeLink="overview">Shop</a></li>
-        <li class="list-item"><a routeLink="overview">Shop</a></li>
+        <li class="list-item" routerLink="/shop" routerActiveLink="active">Shop</li>
+        <li class="list-item" routerLink="/overview" routerActiveLink="active">Shop</li>
+        <li class="list-item" routerLink="/overview" routerActiveLink="list-item-active">Shop</li>
+        <li class="list-item" routerLink="/overview" routerActiveLink="list-item-active">Shop</li>
     </ul>
 </div>
 
 <mat-drawer-container class="drawer-container">
     <mat-drawer mode="over" [opened]="isOpen" class="drawer-section">
         <mat-nav-list>
-            <a mat-list-item routerLink="/overview" routerLinkActive="active"><img src="./././assets/person_24dp.svg" height="20" width="20" alt="overview icon"> Overview</a>
-            <a mat-list-item routerLink="/profile" routerLinkActive="active"><img src="./././assets/person_24dp.svg" height="20" width="20" alt="profile icon"> Profile</a>
-            <a mat-list-item routerLink="/account" routerLinkActive="active"><img src="./././assets/group_24dp.svg" height="20" width="20" alt="account icon"> Account</a>
-            <a mat-list-item routerLink="/purchase-history" routerLinkActive="active"><img src="./././assets/local_mall_24dp.svg" height="20" width="20" alt="history icon"> Purchase History</a>
-            <a mat-list-item routerLink="/settings" routerLinkActive="active"><img src="./././assets/settings_24dp.svg" height="20" width="20" alt="settings icon"> Settings</a>
-            <a mat-list-item routerLink="/security" routerLinkActive="active"><img src="./././assets/security_24dp.svg" height="20" width="20" alt="security icon"> Security</a>
+            <mat-list mat-list-item routerLink="/overview" routerLinkActive="active"><img src="./././assets/person_24dp.svg" height="20" width="20" alt="overview icon" [ngClass]="{'svg-filter': isActive('/overview')}"><span>Overview</span></mat-list>
+            <mat-list mat-list-item routerLink="/shop" routerLinkActive="active"><img src="./././assets/person_24dp.svg" height="20" width="20" alt="shop icon" [ngClass]="{'svg-filter': isActive('/shop')}"><span>Shop</span></mat-list>
+            <mat-list mat-list-item routerLink="/profile" routerLinkActive="active"><img src="./././assets/person_24dp.svg" height="20" width="20" alt="profile icon" [ngClass]="{'svg-filter': isActive('/profile')}"><span>Profile</span></mat-list>
+            <mat-list mat-list-item routerLink="/account" routerLinkActive="active"><img src="./././assets/group_24dp.svg" height="20" width="20" alt="account icon" [ngClass]="{'svg-filter': isActive('/account')}"><span>Account</span></mat-list>
+            <mat-list mat-list-item routerLink="/purchase-history" routerLinkActive="active"><img src="./././assets/local_mall_24dp.svg" height="20" width="20" alt="history icon" [ngClass]="{'svg-filter': isActive('/purchase-history')}"><span>Purchase History</span></mat-list>
+            <mat-list mat-list-item routerLink="/settings" routerLinkActive="active"><img src="./././assets/settings_24dp.svg" height="20" width="20" alt="settings icon" [ngClass]="{'svg-filter': isActive('/settings')}"><span>Settings</span></mat-list>
+            <mat-list mat-list-item routerLink="/security" routerLinkActive="active"><img src="./././assets/security_24dp.svg" height="20" width="20" alt="security icon" [ngClass]="{'svg-filter': isActive('/security')}"><span>Security</span></mat-list>
         </mat-nav-list>
     </mat-drawer>
 

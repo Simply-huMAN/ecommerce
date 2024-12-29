@@ -34,28 +34,50 @@
   height: 100vh;
 }
 
-.list-item{
+.drawer-section{
+  padding: 0.5rem;
+}
+
+li{
   margin: 0 1rem;
   list-style: none;
-  /* background-color: #126ae5; */
+}
+
+mat-nav-list mat-list{
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  cursor: pointer;
+}
+
+mat-list span{
+  margin: 0 0.5rem;
 }
 
 .active {
-  font-weight: bold;
-  text-decoration: underline;
-  color: #007bff;
+  color: white;
+  background: var(--mat-blue);
+  /* background: #007bff; */
+  border-radius: 0.2em;
 }
 
-a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: black;
-  text-decoration: none;
+.list-item-active{
+  background: var(--mat-blue);
+  /* background: #007bff; */
+  color: white;
+  border-radius: 0.2em;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
-a:hover{
+.svg-filter{
+  filter: invert(100%);
+}
+
+li:hover{
   color: #007bff;
+  cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 
