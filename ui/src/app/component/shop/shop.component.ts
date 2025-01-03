@@ -31,9 +31,10 @@ export class ShopComponent implements OnInit {
     rating: 0
   });
   categories: string[] = [
+    "ALL",
     "ELECTRONICS",
     "FASHION",
-    "HOME_APPLIANCES",
+    "HOME APPLIANCES",
     "BOOKS",
     "SPORTS",
     "TOYS",

@@ -1,0 +1,11 @@
+<div class="carousel-container">
+    <button *ngIf="images.length>1" mat-raised-button (click)="goToPreviousImage(currentIndex)" class="carousel-image-control-prev">
+        <mat-icon>arrow_back</mat-icon>
+    </button>
+    <div *ngIf="images.length>0" class="carousel-image-container" style="width: 100%; display: flex; justify-content: center;">
+        <img [src]="images[currentIndex]" alt="image {{currentIndex+1}}" width="100%" onerror="this.src='assets/fallback_image_24dp.svg';">
+    </div>
+    <button *ngIf="images.length>1" mat-raised-button (click)="goToNextImage(currentIndex)" class="carousel-image-control-next">
+        <mat-icon>arrow_forward</mat-icon>
+    </button>
+</div>

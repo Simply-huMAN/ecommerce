@@ -9,7 +9,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background: #efefef;
+  background: var(--mat-grey);
 }
 
 .header-brand-section{

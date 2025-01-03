@@ -8,6 +8,7 @@ import { OverviewComponent } from './component/overview/overview.component';
 import { LoginComponent } from './component/login/login.component';
 import { ShopComponent } from './component/shop/shop.component';
 import { ProductComponent } from './component/product/product.component';
+import { CarouselComponent } from './component/carousel/carousel.component';
 
 export const routes: Routes = [
   { path: 'register', component: RegistrationComponent },
@@ -27,5 +28,6 @@ export const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'shop', component: ShopComponent },
-  { path: 'shop/:productId', component: ProductComponent }
+  { path: 'shop/:productId', component: ProductComponent },
+  { path: 'carousel', component: CarouselComponent }
 ];

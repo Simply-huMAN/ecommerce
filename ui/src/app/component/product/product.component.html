@@ -6,6 +6,7 @@
     <div *ngIf="fetching" class="loading-spinner">
         <mat-progress-spinner mode="indeterminate" diameter="50"></mat-progress-spinner>
     </div>
+
     <div *ngIf="product===null && !fetching" class="error-container">
         <div class="error-container-header">
             <img src="assets/error_24dp.svg" alt="error logo">
@@ -16,14 +17,14 @@
             <button mat-raised-button>Shop</button>
         </div>
     </div>
+
     <div *ngIf="product && !fetching" class="product-card-container">
 
         <div class="product-card-left-section">
-            
             <div>
-                <img [src]="product.productImages[0]" alt="product image" width="100%">
+                <app-carousel [images]="product.productImages"></app-carousel>
+                <!-- <img [src]="product.productImages[0]" alt="product image" width="100%"> -->
             </div>
-
         </div>
 
         <div class="product-card-right-section">

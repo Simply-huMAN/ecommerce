@@ -10,11 +10,12 @@ import { MatDivider } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
+import { CarouselComponent } from '../carousel/carousel.component';
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [CommonModule, HttpClientModule, RouterModule , MatCardModule, MatButtonModule, MatProgressSpinnerModule, MatDivider, MatFormFieldModule, MatOptionModule, MatSelectModule],
+  imports: [CommonModule, HttpClientModule, RouterModule , MatCardModule, MatButtonModule, MatProgressSpinnerModule, MatDivider, MatFormFieldModule, MatOptionModule, MatSelectModule, CarouselComponent],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
