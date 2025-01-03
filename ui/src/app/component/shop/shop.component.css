@@ -4,6 +4,23 @@
     /* background: red; */
 }
 
+.product-card-filter-container{
+    margin: 0.25rem;
+}
+
+.product-card-filter-section{
+    /* position: absolute;
+    left: 1%; */
+    display: flex;
+    flex-direction: column;
+    margin: 0.25rem;
+}
+
+.expansion-panel-description{
+    display: flex;
+    justify-content: flex-end;
+}
+
 .product-card{
     /* background-color: green; */
     display: flex;
@@ -45,6 +62,26 @@
 
 button{
     margin: 0 0.2rem;
+}
+
+.primary-raised-button{
+    color: var(--mat-blue);
+}
+
+@media screen and (max-width: 1500px){
+    .product-card-filter-container{
+        margin: 0.25rem;
+    }
+    .product-card-filter-section{
+        /* position: relative; */
+        /* display: flex; */
+        /* padding: 0.25rem; */
+        /* margin: 0.25rem; */
+    }
+
+    /* .product-card{
+        width: 30%;
+    }   */
 }
 
 @media screen and (max-width: 900px){

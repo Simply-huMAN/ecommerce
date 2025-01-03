@@ -4,6 +4,7 @@
 
 :root{
     --mat-blue: #3f51b5;
+    --adjusted-height: calc(100vh-2px);
 }
 
 *{
@@ -38,7 +39,27 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
+}
+
+.error-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.error-container-header{
+    display: flex;
+    justify-content: center;
+}
+
+.error-container-footer{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    margin: 0.25rem;
 }
 
 .medium-card{
@@ -49,4 +70,8 @@ a{
 .small-card{
     max-width: 600px;
     margin: 0 auto;
+}
+
+.primary-raised-button{
+    color: var(--mat-blue);
 }

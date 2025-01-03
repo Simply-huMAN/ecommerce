@@ -2,23 +2,72 @@
     <div *ngIf="fetching" class="loading-spinner">
         <mat-progress-spinner mode="indeterminate" diameter="50"></mat-progress-spinner>
     </div>
-    <div *ngIf="!fetching" class="product-card-container">
-        <mat-card *ngFor="let product of products" class="product-card">
-            <mat-card-header>
-                <span *ngIf="product.productQuantity===0" class="out-of-stock">out of stock</span>
-                <img [src]="product.productImages[0]" alt="product image" width="100%">
-            </mat-card-header>
-            
-            <mat-card-content>
-                <mat-card-title>{{product.productName}}</mat-card-title>
-                <mat-card-subtitle>{{product.productCategory}}</mat-card-subtitle>
-                <mat-card-subtitle>₹ {{product.productPrice}}</mat-card-subtitle>
-            </mat-card-content>
+    <div *ngIf="products.length===0 || error" class="error-container">
+        <div class="error-container-header">
+            <img src="assets/error_24dp.svg" alt="error logo">
+            <span>We couldn't fetch products at this moment. Please try again later.</span>
+        </div>
+        <div class="error-container-footer">
+            <button mat-raised-button>Home</button>
+            <button mat-raised-button>Shop</button>
+        </div>
+    </div>
+    <div *ngIf="!fetching && !error">
+        <div>
+            <mat-accordion class="product-card-filter-container">
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>Filter</mat-panel-title>
+                        <mat-panel-description class="expansion-panel-description">
+                            <mat-icon>tune</mat-icon>
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
 
-            <mat-card-actions>
-                <button mat-button color="primary">Add to Cart</button>
-                <button mat-raised-button color="primary" [routerLink]="['/shop',product.productId]">Buy</button>
-            </mat-card-actions>
-        </mat-card>
+                    
+                    <form [formGroup]="productFilter" class="product-card-filter-section">
+                        <mat-form-field>
+                            <mat-label>Product Category</mat-label>
+                            <mat-select formControlName="category" [(value)]="selectedCategory">
+                                <mat-option *ngFor="let category of categories" [value]="category">{{category}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+            
+                        <mat-label>Price</mat-label>
+                        <mat-slider min="0" max="1000000" step="1000" showTickMarks discrete>
+                            <input formControlName="minPrice" value="10000" matSliderStartThumb>
+                            <input formControlName="maxPrice" value="100000" matSliderEndThumb>
+                        </mat-slider>
+
+                        <mat-label>Rating</mat-label>
+                        <mat-slider min="0" max="5" step="1" showTickMarks discrete disabled>
+                            <input value="0" matSliderStartThumb>
+                            <input value="5" matSliderEndThumb>
+                        </mat-slider>
+        
+                        <button mat-raised-button color="primary" (click)="applyFilter()">Apply Filter</button>
+                    </form>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+
+        <div class="product-card-container">
+            <mat-card *ngFor="let product of products" class="product-card">
+                <mat-card-header>
+                    <span *ngIf="product.productQuantity===0" class="out-of-stock">out of stock</span>
+                    <img [attr.loading]="'eager'" [src]="product.productImages[0]" alt="product image" width="100%" onerror="this.src='assets/fallback_image_24dp.svg';">
+                </mat-card-header>
+                
+                <mat-card-content>
+                    <mat-card-title>{{product.productName}}</mat-card-title>
+                    <mat-card-subtitle>{{product.productCategory}}</mat-card-subtitle>
+                    <mat-card-subtitle>₹ {{product.productPrice}}</mat-card-subtitle>
+                </mat-card-content>
+    
+                <mat-card-actions>
+                    <button mat-raised-button style="color: var(--mat-blue);">Add to Cart</button>
+                    <button mat-raised-button color="primary" [routerLink]="['/shop',product.productId]">Buy</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
     </div>
 </div>

@@ -21,9 +21,12 @@ export class AppComponent {
     console.log(`toggleDrawer before-state: ${this.isOpen}`);
     this.isOpen = !this.isOpen;
     console.log(`toggleDrawer after-state: ${this.isOpen}\n\n`);
+
+    // const header_section = document.getElementsByClassName('header-section')[0];
+    // console.log(`Header section height: ${header_section.clientHeight}`);
   }
 
   isActive(route: string): boolean{
-    return route === this.router.url;
+    return this.router.url.startsWith(route);
   }
 }

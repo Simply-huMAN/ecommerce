@@ -6,11 +6,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ActivatedRoute, RouterModule } from '@angular/router';
+import { MatDivider } from '@angular/material/divider';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [CommonModule, HttpClientModule, RouterModule , MatCardModule, MatButtonModule, MatProgressSpinnerModule],
+  imports: [CommonModule, HttpClientModule, RouterModule , MatCardModule, MatButtonModule, MatProgressSpinnerModule, MatDivider, MatFormFieldModule, MatOptionModule, MatSelectModule],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })

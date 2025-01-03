@@ -1,29 +1,54 @@
-<p>product works!</p>
+<div class="redirect-back-container">
+    <img src="assets/chevron_right_24dp.svg" alt="back logo">
+    <p>back</p>
+</div>
 <div class="container">
     <div *ngIf="fetching" class="loading-spinner">
         <mat-progress-spinner mode="indeterminate" diameter="50"></mat-progress-spinner>
     </div>
-    <div *ngIf="product===null && !fetching" class="no-product">
-        <p>No product available</p>
+    <div *ngIf="product===null && !fetching" class="error-container">
+        <div class="error-container-header">
+            <img src="assets/error_24dp.svg" alt="error logo">
+            <span>The product is not found</span>
+        </div>
+        <div class="error-container-footer">
+            <button mat-raised-button>Home</button>
+            <button mat-raised-button>Shop</button>
+        </div>
     </div>
     <div *ngIf="product && !fetching" class="product-card-container">
-        <!-- <mat-card *ngFor="let product of product" class="product-card">
-            <mat-card-header>
-                <span *ngIf="product.productQuantity===0" class="out-of-stock">out of stock</span>
-                <img src={{product.productImages[0]}} alt="product image" width="200">
-            </mat-card-header>
-            
-            <mat-card-content>
-                <mat-card-title>{{product.productName}}</mat-card-title>
-                <mat-card-subtitle>{{product.productCategory}}</mat-card-subtitle>
-                <mat-card-subtitle>₹ {{product.productPrice}}</mat-card-subtitle>
-            </mat-card-content>
 
-            <mat-card-actions>
-                <button mat-button color="primary">Add to Cart</button>
-                <button mat-raised-button color="primary" [routerLink]="['/shop',product.productId]">Buy</button>
-            </mat-card-actions>
-        </mat-card> -->
+        <div class="product-card-left-section">
+            
+            <div>
+                <img [src]="product.productImages[0]" alt="product image" width="100%">
+            </div>
+
+        </div>
+
+        <div class="product-card-right-section">
+            <div>
+                <span class="product-text-data">{{product.productName}}</span>
+            </div>
+            <mat-divider></mat-divider>
+            <div>
+                <span class="product-text-data">MRP (Incl. of all taxes) ₹{{product.productPrice}}</span>
+                <button mat-raised-button color="primary" [routerLink]="['/checkout']">Buy</button>
+            </div>
+            <div>
+                <p class="product-text-data">Description</p>
+                <p>{{product.productDescription}}</p>
+            </div>
+            <div>
+                <p class="product-text-data">Category</p>
+                <span>{{product.productCategory}}</span>
+            </div>
+            <div>
+                <span class="product-text-data">MRP (Incl. of all taxes) ₹{{product.productPrice}}</span>
+                <button mat-raised-button color="primary" [routerLink]="['/checkout']">Buy</button>
+            </div>
+
+        </div>
     </div>
 
 </div>
