@@ -14,7 +14,7 @@
     </div>
     <div *ngIf="!fetching && !error">
         <div>
-            <mat-accordion class="product-card-filter-container">
+            <mat-accordion>
                 <mat-expansion-panel>
                     <mat-expansion-panel-header>
                         <mat-panel-title>Filter</mat-panel-title>
@@ -54,12 +54,12 @@
             <mat-card *ngFor="let product of products" class="product-card">
                 <mat-card-header>
                     <span *ngIf="product.productQuantity===0" class="out-of-stock">out of stock</span>
-                    <img [attr.loading]="'eager'" [src]="product.productImages[0]" alt="product image" width="100%" onerror="this.src='assets/fallback_image_24dp.svg';">
+                    <!-- <app-carousel [images]="product.productImages"></app-carousel> -->
+                    <img [attr.loading]="'eager'" [src]="product.productImages[0]" alt="product image" class="product-image" onerror="this.src='assets/fallback_image_24dp.svg';">
                 </mat-card-header>
                 
                 <mat-card-content>
                     <mat-card-title>{{product.productName}}</mat-card-title>
-                    <mat-card-subtitle>{{product.productCategory}}</mat-card-subtitle>
                     <mat-card-subtitle>₹ {{product.productPrice}}</mat-card-subtitle>
                 </mat-card-content>
     

@@ -1,7 +1,3 @@
-<div class="redirect-back-container">
-    <img src="assets/chevron_right_24dp.svg" alt="back logo">
-    <p>back</p>
-</div>
 <div class="container">
     <div *ngIf="fetching" class="loading-spinner">
         <mat-progress-spinner mode="indeterminate" diameter="50"></mat-progress-spinner>
@@ -19,18 +15,15 @@
     </div>
 
     <div *ngIf="product && !fetching" class="product-card-container">
-
-        <div class="product-card-left-section">
             <div>
-                <app-carousel [images]="product.productImages"></app-carousel>
+                <span class="product-title">{{product.productName}}</span>
+            </div>
+            <div>
+                <app-carousel [images]="product.productImages" class="carousel-container"></app-carousel>
                 <!-- <img [src]="product.productImages[0]" alt="product image" width="100%"> -->
             </div>
-        </div>
 
         <div class="product-card-right-section">
-            <div>
-                <span class="product-text-data">{{product.productName}}</span>
-            </div>
             <mat-divider></mat-divider>
             <div>
                 <span class="product-text-data">MRP (Incl. of all taxes) ₹{{product.productPrice}}</span>
