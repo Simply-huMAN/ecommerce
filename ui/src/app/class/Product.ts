@@ -1,3 +1,5 @@
+import { Specification } from "./Specification";
+
 export class Product {
     productId: number;
     productName: string;
@@ -6,8 +8,9 @@ export class Product {
     productQuantity: number;
     productCategory: string;
     productImages: string[];
+    productSpecification: Specification[];
 
-    constructor(productId?: number, productName?: string, productDescription?: string, productPrice?: number, productQuantity?: number, productCategory?: string, productImages?: string[]) {
+    constructor(productId?: number, productName?: string, productDescription?: string, productPrice?: number, productQuantity?: number, productCategory?: string, productImages?: string[], productSpecification?: Specification[]){
         this.productId = productId || 0;
         this.productName = productName || '';
         this.productDescription = productDescription || '';
@@ -15,5 +18,6 @@ export class Product {
         this.productQuantity = productQuantity || 0;
         this.productCategory = productCategory || '';
         this.productImages = productImages || [];
+        this.productSpecification = productSpecification || [];
     }
 }

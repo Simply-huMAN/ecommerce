@@ -14,10 +14,12 @@ import { MatSliderModule } from '@angular/material/slider';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatAccordion, MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDivider } from '@angular/material/divider';
+
 @Component({
   selector: 'app-shop',
   standalone: true,
-  imports: [CommonModule, HttpClientModule, RouterModule , MatCardModule, MatButtonModule, MatProgressSpinnerModule, FormsModule, ReactiveFormsModule, MatFormFieldModule, MatSelectModule, MatSliderModule, MatAccordion, MatExpansionModule, MatIconModule, CarouselComponent],
+  imports: [CommonModule, HttpClientModule, RouterModule , MatCardModule, MatButtonModule, MatProgressSpinnerModule, FormsModule, ReactiveFormsModule, MatFormFieldModule, MatSelectModule, MatSliderModule, MatAccordion, MatExpansionModule, MatIconModule, CarouselComponent, MatDivider],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.css'
 })

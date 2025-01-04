@@ -37,8 +37,7 @@ a{
 .container{
     max-width: 1000px;
     margin: 0 auto;
-    padding-top: 1rem;
-    /* padding: 1rem 0; */
+    padding: 1rem 0;
 }
 
 .loading-spinner{
@@ -80,4 +79,13 @@ a{
 
 .primary-raised-button{
     color: var(--mat-blue);
+}
+
+@media screen and (max-width: 1000px){
+    body{}
+
+    .container{
+        padding: 1rem;
+    }
+    
 }
