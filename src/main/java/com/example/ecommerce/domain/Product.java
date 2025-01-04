@@ -19,6 +19,8 @@ public class Product {
     @Enumerated(EnumType.STRING)
     private ProductCategory productCategory;
     private List<String> productImages;
+    @ElementCollection
+    private List<Specification> productSpecification;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

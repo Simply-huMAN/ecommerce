@@ -1,7 +1,7 @@
 [
   {
     "productName": "LG OLED evo AI C4 4K TV",
-    "productDescription": "**LG OLED evo AI C4 65\" (165 cm) 4K Smart TV 2024**  \n\nDiscover the blend of cutting-edge technology and refined simplicity with the LG OLED evo AI C4. Designed to elevate your home entertainment experience, this 65-inch (165 cm) Smart TV delivers exceptional picture quality, intuitive usability, and seamless integration into your lifestyle.  \n\n### **Key Features:**  \n\n#### **True-to-Life Picture Quality**  \nAt the heart of the LG OLED evo AI C4 is its self-lit OLED technology. Each pixel illuminates independently, offering perfect blacks, vibrant colors, and infinite contrast. The 4K resolution ensures every scene is rendered with remarkable clarity and precision, whether you're watching movies, sports, or gaming.  \n\n#### **AI-Powered Intelligence**  \nEquipped with LG’s latest AI processor, this TV optimizes content in real-time. From adjusting picture settings to enhancing sound quality, the AI ensures a tailored viewing experience. It even learns your preferences, offering personalized recommendations over time.  \n\n#### **Smooth Design and User Experience**  \nThe minimalist design fits seamlessly into any space, whether wall-mounted or on its sleek stand. LG’s webOS platform provides an intuitive interface, making it easy to navigate between streaming services, live TV, and apps.  \n\n#### **Immersive Sound Experience**  \nWith AI Sound Pro, this TV elevates audio by analyzing content and optimizing sound output. Enjoy clear dialogues, rich bass, and a surround effect that complements the stunning visuals.  \n\n#### **Future-Ready Connectivity**  \nThe LG OLED evo AI C4 supports HDMI 2.1, offering smooth gaming with features like VRR, ALLM, and a 120Hz refresh rate. With Wi-Fi 6 compatibility, streaming 4K content is fast and seamless.  \n\n#### **Eco-Conscious Design**  \nBuilt with sustainability in mind, this TV uses fewer materials and energy-efficient components, reducing its environmental footprint.  \n\nWhether you're upgrading your living room or setting up a home theater, the LG OLED evo AI C4 combines performance, design, and convenience. It’s a choice made for those who appreciate uncompromising quality without unnecessary complexity.  \n\nExperience a smarter, more vivid world with LG OLED evo AI C4.",
+    "productDescription": "The LG OLED evo AI C4 4K TV is a sophisticated addition to any home entertainment setup, delivering performance, clarity, and convenience. With its self-lit OLED technology, this television offers precise picture quality by individually illuminating each pixel. The result is perfect blacks, vibrant colors, and exceptional contrast, ensuring every scene looks true-to-life.\n\nPowered by LG's advanced AI processor, the OLED evo AI C4 optimizes visuals and audio in real-time, adapting to the content you're watching. Whether it's a dramatic movie, live sports, or a fast-paced video game, the TV adjusts seamlessly to provide a tailored and immersive experience.\n\nThis model features a 4K resolution display, providing sharp and detailed visuals. The slim and minimalist design ensures it fits into any space, whether mounted on a wall or placed on its stand. The built-in webOS smart platform allows for easy navigation, giving you quick access to your favorite streaming apps, live TV, and settings.\n\nThe TV supports Dolby Vision and Dolby Atmos, offering an enhanced cinematic experience with vivid visuals and rich, multidimensional sound. Multiple connectivity options, including HDMI 2.1, ensure compatibility with the latest gaming consoles and home theater systems, while features like low input lag and high refresh rates make it a great choice for gaming.\n\nWith its blend of cutting-edge technology and intuitive usability, the LG OLED evo AI C4 4K TV is designed to deliver an exceptional viewing experience for everyday use. It's a choice made for those who value quality, performance, and style in their home entertainment.",
     "productPrice": 240989.00,
     "productQuantity": 10,
     "productCategory": "ELECTRONICS",
@@ -14,11 +14,77 @@
       "https://www.lg.com/content/dam/channel/wcms/in/images/tvs/oled65c4xla_atr_eail_in_c/gallery/OLED65C4XLA-DZ-06.jpg/_jcr_content/renditions/thum-1600x1062.jpeg",
       "https://www.lg.com/content/dam/channel/wcms/in/images/tvs/oled65c4xla_atr_eail_in_c/gallery/OLED65C4XLA-DZ-07.jpg/_jcr_content/renditions/thum-1600x1062.jpeg",
       "https://www.lg.com/content/dam/channel/wcms/in/images/tvs/oled65c4xla_atr_eail_in_c/gallery/OLED65C4XLA-DZ-08.jpg/_jcr_content/renditions/thum-1600x1062.jpeg"
+    ],
+    "productSpecification": [
+      {
+        "specificationKey": "Display Type",
+        "specificationValue": "4K OLED"
+      },
+      {
+        "specificationKey": "Display Resolution",
+        "specificationValue": "4K Ultra HD (3840 x 2160)"
+      },
+      {
+        "specificationKey": "Refresh Rate",
+        "specificationValue": "120Hz Native"
+      },
+      {
+        "specificationKey": "Wide Color Gamut",
+        "specificationValue": "OLED Color"
+      },
+      {
+        "specificationKey": "Picture Processor",
+        "specificationValue": "a9 AI Processor 4K Gen7"
+      },
+      {
+        "specificationKey": "HDR (High Dynamic Range)",
+        "specificationValue": "Dolby Vision / HDR10 / HLG"
+      },
+      {
+        "specificationKey": "G-Sync Compatible (Nvidia)",
+        "specificationValue": "Yes"
+      },
+      {
+        "specificationKey": "FreeSync Compatible (AMD)",
+        "specificationValue": "Yes"
+      },
+      {
+        "specificationKey": "Operating System (OS)",
+        "specificationValue": "webOS 24"
+      },
+      {
+        "specificationKey": "Audio Output",
+        "specificationValue": "40W"
+      },
+      {
+        "specificationKey": "Speaker System",
+        "specificationValue": "2.2 Channel"
+      },
+      {
+        "specificationKey": "Dolby Atmos",
+        "specificationValue": "Yes"
+      },
+      {
+        "specificationKey": "Wi-Fi",
+        "specificationValue": "Yes (Wi-Fi 5)"
+      },
+      {
+        "specificationKey": "Bluetooth Support",
+        "specificationValue": "Yes (v5.1)"
+      },
+      {
+        "specificationKey": "TV Dimensions without Stand (WxHxD, mm)",
+        "specificationValue": "1441 x 826 x 45.1"
+      },
+      {
+        "specificationKey": "TV Weight without Stand (kg)",
+        "specificationValue": "16.6"
+      }
     ]
   },
   {
-    "productName": "LG OLED ThinQ AI 4K TV",
-    "productDescription": "The LG OLED ThinQ AI 4K TV is a premium television designed to deliver an immersive viewing experience. With its self-lit OLED technology, this TV offers perfect viewing experience.",
+    "productName": "LG OLED B2 AI 4K TV",
+    "productDescription": "The LG 164 cm (65-inch) OLED TV (B2 Series) is crafted to deliver an immersive and intelligent home entertainment experience. Powered by the α7 Gen 5 AI Processor 4K, this TV ensures stunning visuals and optimized performance, bringing your favorite content to life with exceptional detail and clarity.\n\nIts self-lit OLED technology provides true-to-life picture quality with perfect blacks, vibrant colors, and infinite contrast. Dynamic Tone Mapping enhances the visual experience further by analyzing each frame and optimizing the brightness and color levels for a more realistic display.\n\nThis model is equipped with ThinQ AI, allowing you to control the TV and other smart devices seamlessly using voice commands. Whether browsing content or adjusting settings, the intuitive interface ensures effortless operation. The support for Variable Refresh Rate (VRR) and other gaming features makes it an excellent choice for gamers, offering smooth and responsive gameplay without tearing or lag.\n\nThe sleek and minimalist design of the LG B2 OLED TV complements any living space, while the 4K resolution ensures that every detail is visible, whether you're streaming, gaming, or watching live TV. Its advanced sound processing capabilities, combined with clear and immersive audio output, make it a versatile choice for all-around entertainment.\n\nThe LG 65-inch OLED TV (B2 Series) strikes the perfect balance between performance, design, and smart functionality, making it an ideal centerpiece for your home entertainment setup.",
     "productPrice": 265990.00,
     "productQuantity": 10,
     "productCategory": "ELECTRONICS",
@@ -46,7 +112,7 @@
     "productDescription": "Samsung",
     "productPrice": 379990.00,
     "productQuantity": 10,
-    "productCategory": "ELECTRONICS",
+    "productCategory": "The Samsung Neo QLED 8K QN800D Smart AI TV is designed to redefine your home entertainment experience with cutting-edge technology and precision engineering. Its 8K resolution offers four times the detail of 4K, delivering unmatched clarity and realism. With Neo QLED technology, the TV employs Mini LEDs for precise backlighting, resulting in deeper blacks, brighter highlights, and more accurate color reproduction.\n\nThis model is powered by Samsung’s Neural Quantum Processor 8K, which enhances picture quality using AI-driven upscaling, ensuring that even non-8K content appears sharp and detailed. Whether you’re watching movies, sports, or gaming, the QN800D adapts dynamically to provide an optimized viewing experience.\n\nThe sleek Infinity One Design makes the QN800D a stylish addition to any living space, with ultra-thin bezels and a slim profile. The TV includes Object Tracking Sound Pro technology, which creates a 3D sound experience by aligning audio with on-screen action, immersing you further into the content.\n\nEquipped with Smart Hub, the TV offers seamless access to streaming platforms, apps, and live TV. Voice assistant integration allows you to control the TV and connected devices hands-free. Multiple HDMI 2.1 ports and advanced gaming features, such as low input lag and a high refresh rate, make it an excellent choice for gamers seeking smooth and responsive gameplay.\n\nThe Samsung Neo QLED 8K QN800D is built with sustainability in mind, incorporating energy-efficient technology and eco-friendly materials. It’s a versatile and high-performance choice for customers who demand excellence in picture quality, design, and smart functionality.",
     "productImages": [
       "https://images.samsung.com/is/image/samsung/p6pim/in/qa65qn800duxxl/gallery/in-qled-qn800d-qa65qn800duxxl-540992380?$684_547_JPG$"
     ]
