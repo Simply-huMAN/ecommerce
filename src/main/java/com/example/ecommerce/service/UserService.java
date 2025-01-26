@@ -17,8 +17,8 @@ public class UserService {
     }
 
     public boolean authenticateUser(User user){
-        User userFromDb = userRepository.findByEmailAndPassword(user.getEmail(), user.getPassword());
-        if(userFromDb != null){
+        User userRecord = userRepository.findByEmailAndPassword(user.getEmail(), user.getPassword());
+        if(userRecord != null){
             return true;
         }
         return false;
