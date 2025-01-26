@@ -9,25 +9,31 @@ import { LoginComponent } from './component/login/login.component';
 import { ShopComponent } from './component/shop/shop.component';
 import { ProductComponent } from './component/product/product.component';
 import { CarouselComponent } from './component/carousel/carousel.component';
+import { authGuard } from './guard/auth.guard';
 
 export const routes: Routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
   { 
-    path: 'dashboard', component: DashboardComponent,
+    path: '',
+    canActivate: [authGuard],
     children: [
-      // { path: '', redirectTo: 'overview'
-      // , pathMatch: 'full' },
+      { 
+        path: 'dashboard', component: DashboardComponent,
+        children: [
+          // { path: '', redirectTo: 'overview', pathMatch: 'full' },
+          { path: 'overview', component: OverviewComponent },
+          { path: 'profile', component: ProfileComponent },
+          { path: 'settings', component: SettingsComponent }
+        ]
+      },
+      { path: 'products', component: ProductsComponent },
       { path: 'overview', component: OverviewComponent },
       { path: 'profile', component: ProfileComponent },
-      { path: 'settings', component: SettingsComponent }
+      { path: 'settings', component: SettingsComponent },
+      { path: 'shop', component: ShopComponent },
+      { path: 'shop/:productId', component: ProductComponent },
+      { path: 'carousel', component: CarouselComponent }
     ]
-  },
-  { path: 'products', component: ProductsComponent },
-  { path: 'overview', component: OverviewComponent },
-  { path: 'profile', component: ProfileComponent },
-  { path: 'settings', component: SettingsComponent },
-  { path: 'shop', component: ShopComponent },
-  { path: 'shop/:productId', component: ProductComponent },
-  { path: 'carousel', component: CarouselComponent }
+  }
 ];
