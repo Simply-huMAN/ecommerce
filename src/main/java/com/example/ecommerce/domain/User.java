@@ -20,6 +20,7 @@ public class User {
     @Column(unique = true)
     private String email;
     private String phone;
+    private String profilePicture;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     private List<Product> purchaseHistory;
