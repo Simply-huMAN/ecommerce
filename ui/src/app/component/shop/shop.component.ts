@@ -57,10 +57,10 @@ export class ShopComponent implements OnInit {
   }
 
   fetchProducts(){
-    this.httpClient.get('http://localhost:8080/products')
+    this.httpClient.get<Product[]>('http://localhost:8080/products')
       .subscribe((response) => {
         console.log(response);
-        this.products = response as Product[];
+        this.products = response;
         this.fetching = false;
         console.log(this.products);
       }, error => {
@@ -69,6 +69,11 @@ export class ShopComponent implements OnInit {
         this.error = true;
       }
     );
+  }
+
+  buyProduct(product: Product){
+    console.log(`Buying product...`);
+    console.log(product);
   }
 
   applyFilter(){

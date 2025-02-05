@@ -1,27 +1,41 @@
 <div class="container">
-    <div class="profile-section">
-        <img src="./././assets/account_circle_24dp.svg" height="200" width="200" alt="profile icon">
-        <span>&#64; myUserName</span>
+    <div *ngIf="user===null" class="error-container">
+        <div class="error-container-header">
+            <img src="assets/error_24dp.svg" alt="error logo">
+            <span>Couldn't fetch your details at the moment. Please try again later.</span>
+        </div>
+        <div class="error-container-footer">
+            <button mat-raised-button>Home</button>
+            <button mat-raised-button>Shop</button>
+        </div>
     </div>
 
-    <div>
-        <mat-form-field class="user-info-section">
-            <section class="user-info-field">
-                <mat-label>First Name</mat-label>
-                <input matInput placeholder="First Name" value="John" disabled>
-            </section>
-            <section class="user-info-field">
-                <mat-label>Last Name</mat-label>
-                <input matInput placeholder="First Name" value="Doe" disabled>
-            </section>
-            <section class="user-info-field">
-                <mat-label>Email address</mat-label>
-                <input matInput placeholder="First Name" value="john.doe@gmail.com" disabled>
-            </section>
-            <section class="user-info-field">
-                <mat-label>Phone Number</mat-label>
-                <input matInput placeholder="First Name" value="+1 1234567890" disabled>
-            </section>
-        </mat-form-field>
+    <div *ngIf="user!=null" class="profile-container">
+        <div class="profile-section">
+            <img *ngIf="user.profilePicture===null" src="./././assets/account_circle_24dp.svg" height="200" width="200" alt="profile icon">
+            <img *ngIf="user.profilePicture!=null" src={{user.profilePicture}} height="200" width="200" alt="profile icon">
+            <span>&#64; {{user.username}}</span>
+        </div>
+
+        <div>
+            <mat-form-field class="user-info-section">
+                <section class="user-info-field">
+                    <mat-label>First Name</mat-label>
+                    <input matInput placeholder="First Name" value={{user.firstname}} disabled>
+                </section>
+                <section class="user-info-field">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput placeholder="First Name" value={{user.lastname}} disabled>
+                </section>
+                <section class="user-info-field">
+                    <mat-label>Email address</mat-label>
+                    <input matInput placeholder="First Name" value={{user.email}} disabled>
+                </section>
+                <section class="user-info-field">
+                    <mat-label>Phone Number</mat-label>
+                    <input matInput placeholder="First Name" value="+1 1234567890" disabled>
+                </section>
+            </mat-form-field>
+        </div>
     </div>
 </div>

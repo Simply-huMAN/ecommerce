@@ -1,9 +1,9 @@
-export class Specification{
+export interface Specification{
     specificationKey: string;
     specificationValue: string;
 
-    constructor(specificationKey?: string, specificationValue?: string){
-        this.specificationKey = specificationKey || '';
-        this.specificationValue = specificationValue || '';
-    }
+    // constructor(specificationKey?: string, specificationValue?: string){
+    //     this.specificationKey = specificationKey || '';
+    //     this.specificationValue = specificationValue || '';
+    // }
 }

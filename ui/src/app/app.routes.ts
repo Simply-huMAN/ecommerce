@@ -10,6 +10,7 @@ import { ShopComponent } from './component/shop/shop.component';
 import { ProductComponent } from './component/product/product.component';
 import { CarouselComponent } from './component/carousel/carousel.component';
 import { authGuard } from './guard/auth.guard';
+import { CheckoutComponent } from './component/checkout/checkout.component';
 
 export const routes: Routes = [
   { path: 'register', component: RegistrationComponent },
@@ -33,6 +34,7 @@ export const routes: Routes = [
       { path: 'settings', component: SettingsComponent },
       { path: 'shop', component: ShopComponent },
       { path: 'shop/:productId', component: ProductComponent },
+      { path: ':productId/checkout', component: CheckoutComponent },
       { path: 'carousel', component: CarouselComponent }
     ]
   }

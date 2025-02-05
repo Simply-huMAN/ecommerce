@@ -5,7 +5,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { ActivatedRoute, RouterModule, Router } from '@angular/router';
 import { MatDivider } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatOptionModule } from '@angular/material/core';
@@ -23,7 +23,7 @@ export class ProductComponent implements OnInit {
   fetching = true;
   product: Product | null = null;
 
-  constructor(private httpClient: HttpClient, private route: ActivatedRoute) {}
+  constructor(private httpClient: HttpClient, private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
@@ -38,15 +38,22 @@ export class ProductComponent implements OnInit {
   }
 
   fetchProduct(productId: string){
-    this.httpClient.get('http://localhost:8080/products/' + productId)
+    this.httpClient.get(`http://localhost:8080/products/${productId}`)
       .subscribe((response) => {
         console.log(response);
         this.product = response as Product;
         this.fetching = false;
+
+        console.log(this.product);
       }, error => {
-        console.log(error);
+        console.error(error);
         this.fetching = false;
       }
     );
+  }
+
+  checkoutProduct(){
+    localStorage.setItem('currentProduct', JSON.stringify(this.product));
+    this.router.navigate(['/', this.product?.id, 'checkout']);  
   }
 }

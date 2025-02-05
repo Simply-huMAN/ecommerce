@@ -8,6 +8,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from '../../service/auth.service';
 import { Router } from '@angular/router';
+import { User } from '../../class/User';
 
 @Component({
   selector: 'app-login',
@@ -33,11 +34,17 @@ export class LoginComponent {
     if(this.loginForm.valid){
       this.authService.authenticateUser(this.loginForm.value).subscribe(
         (response) => {
-          console.log(`Logged in: ${response}`);
           const returnUrl = this.router.routerState.snapshot.root.queryParams['returnUrl'] || '/dashboard';
-          console.log(this.router.routerState.snapshot.root.queryParams['returnUrl']);
+
           console.log(`Redirecting to ${returnUrl}`);
+
           localStorage.setItem('isLoggedIn', 'true');
+          localStorage.setItem('userDetails', JSON.stringify(response));
+          // localStorage.setItem('userDetails', response as User);
+
+
+          console.log(`Fetching logged user details (LOGIN COMPONENT)...`);
+          console.log(localStorage);
           this.router.navigate([returnUrl]).then(success => {
             console.log(`Navigation success: ${success}`);
             if(!success){

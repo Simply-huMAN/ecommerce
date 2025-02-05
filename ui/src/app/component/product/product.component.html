@@ -39,7 +39,7 @@
                 <mat-divider></mat-divider>
                 <div class="product-checkout-buttons">
                     <button mat-raised-button style="color: var(--mat-blue);">Wishlist</button>
-                    <button mat-raised-button color="primary" [routerLink]="['/checkout']">Buy</button>
+                    <button mat-raised-button color="primary" (click)="checkoutProduct()">Checkout</button>
                 </div>
             </div>
             <div>
