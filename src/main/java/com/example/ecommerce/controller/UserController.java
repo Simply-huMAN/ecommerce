@@ -1,6 +1,7 @@
 package com.example.ecommerce.controller;
 
 import com.example.ecommerce.domain.User;
+import com.example.ecommerce.dto.UserDTO;
 import com.example.ecommerce.service.UserService;
 import lombok.Data;
 import org.springframework.http.ResponseEntity;
@@ -19,9 +20,9 @@ public class UserController {
     }
 
     @PostMapping("/authenticate")
-    public ResponseEntity<String> authenticateUser(@RequestBody User user){
-        boolean authenticated = userService.authenticateUser(user);
-        if(authenticated) return ResponseEntity.ok("User authenticated");
+    public ResponseEntity<? extends UserDTO> authenticateUser(@RequestBody User user){
+        UserDTO authenticated = userService.authenticateUser(user);
+        if(authenticated!=null) return ResponseEntity.ok(authenticated);
         return ResponseEntity.notFound().build();
     }
 
