@@ -26,6 +26,11 @@ export class AppComponent {
     // console.log(`Header section height: ${header_section.clientHeight}`);
   }
 
+  isUserLoggedIn(){
+    console.log(localStorage.getItem('user'));
+    return localStorage.getItem('user')!=null;
+  }
+
   isActive(route: string): boolean{
     return this.router.url.startsWith(route);
   }

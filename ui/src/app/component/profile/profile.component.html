@@ -12,7 +12,7 @@
 
     <div *ngIf="user!=null" class="profile-container">
         <div class="profile-section">
-            <img *ngIf="user.profilePicture===null" src="./././assets/account_circle_24dp.svg" height="200" width="200" alt="profile icon">
+            <img *ngIf="user.profilePicture===undefined" src="./././assets/account_circle_24dp.svg" height="200" width="200" alt="profile icon">
             <img *ngIf="user.profilePicture!=null" src={{user.profilePicture}} height="200" width="200" alt="profile icon">
             <span>&#64; {{user.username}}</span>
         </div>

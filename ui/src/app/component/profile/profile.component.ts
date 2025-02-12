@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 import { AuthService } from '../../service/auth.service';
 import { CommonModule } from '@angular/common';
 import { User } from '../../class/User';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [MatInputModule, FormsModule, CommonModule],
+  imports: [MatInputModule, FormsModule, CommonModule, MatButtonModule],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css'
 })
