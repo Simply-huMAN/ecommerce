@@ -21,6 +21,10 @@ public class User {
     private String email;
     private String phone;
     private String profilePicture;
+    @Embedded
+    private Wallet wallet;
+    @ElementCollection
+    private List<Address> addresses;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     private List<Product> purchaseHistory;
