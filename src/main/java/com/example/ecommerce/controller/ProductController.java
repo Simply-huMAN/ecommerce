@@ -1,6 +1,8 @@
 package com.example.ecommerce.controller;
 
 import com.example.ecommerce.domain.Product;
+import com.example.ecommerce.domain.User;
+import com.example.ecommerce.dto.UserDTO;
 import com.example.ecommerce.service.ProductService;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -38,6 +40,11 @@ public class ProductController {
     public List<Product> getAllProducts(){
         log.info("Getting all products");
         return productService.getAllProducts();
+    }
+
+    @PostMapping("/{productId}/buy")
+    public UserDTO buyProduct(@PathVariable("productId") Long id,@RequestBody User user){
+        return productService.buyProduct(id, user);
     }
 
 }

@@ -1,6 +1,9 @@
 package com.example.ecommerce.service;
 
 import com.example.ecommerce.domain.Product;
+import com.example.ecommerce.domain.User;
+import com.example.ecommerce.dto.UserDTO;
+import com.example.ecommerce.domain.Wallet;
 import com.example.ecommerce.repository.ProductRepository;
 import lombok.Data;
 import org.springframework.stereotype.Service;
@@ -30,5 +33,15 @@ public class ProductService {
 
     public List<Product> getAllProducts(){
         return productRepository.findAll();
+    }
+
+    public UserDTO buyProduct(Long id, User user){
+        Wallet userWallet = user.getWallet();
+        Product product = productRepository.findById(id).get();
+        double productPrice = product.getProductPrice();
+        if(userWallet.getBalance() < productPrice) return null;
+
+        userWallet.withdraw((int) productPrice);
+        return UserDTO.convertToDTO(user);
     }
 }
