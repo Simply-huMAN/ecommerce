@@ -33,8 +33,8 @@ export const routes: Routes = [
       { path: 'profile', component: ProfileComponent },
       { path: 'settings', component: SettingsComponent },
       { path: 'shop', component: ShopComponent },
-      { path: 'shop/:productId', component: ProductComponent },
-      { path: ':productId/checkout', component: CheckoutComponent },
+      { path: 'products/:productId', component: ProductComponent },
+      { path: 'products/:productId/checkout', component: CheckoutComponent },
       { path: 'carousel', component: CarouselComponent }
     ]
   }

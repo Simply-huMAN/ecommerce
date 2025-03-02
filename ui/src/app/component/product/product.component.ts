@@ -54,6 +54,6 @@ export class ProductComponent implements OnInit {
 
   checkoutProduct(){
     localStorage.setItem('currentProduct', JSON.stringify(this.product));
-    this.router.navigate(['/', this.product?.id, 'checkout']);  
+    this.router.navigate(['/products', this.product?.id, 'checkout']);  
   }
 }

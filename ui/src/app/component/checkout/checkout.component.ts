@@ -38,7 +38,7 @@ export class CheckoutComponent implements OnInit {
       if(this.productId!=this.product?.id){ 
         localStorage.removeItem('currentProduct');
         this.product = null;
-        this.router.navigate(['/shop', this.productId]);
+        this.router.navigate(['/products', this.productId]);
       }
     }, error => {
       console.log(error);
