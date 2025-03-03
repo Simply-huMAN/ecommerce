@@ -15,8 +15,9 @@
             <span class="product-title">{{product?.productName}}</span>
         </div>
 
-        <div class="product-card-right-section">
+        <div class="product-card-right-section component-card">
             <div class="product-checkout-section">
+                <p class="component-card-title">Product Details</p>
                 <div>
                     <span class="product-text-data">MRP (Incl. of all taxes)</span>
                     <span class="product-text-data">₹{{product?.productPrice}}</span>
@@ -29,15 +30,65 @@
                     <span class="product-text-data">Final Price</span>
                     <span class="product-text-data">₹{{product?.productPrice}}</span>
                 </div>
-                <mat-divider></mat-divider>
                 <div class="product-checkout-buttons">
                     <button mat-raised-button style="color: var(--mat-blue);">Wishlist</button>
                     <button mat-raised-button color="primary" >Buy</button>
                 </div>
             </div>
-            <mat-divider></mat-divider>
 
         </div>
+
+        <div class="product-card-right-section component-card">
+            <div class="product-checkout-section">
+                <p class="component-card-title">Address</p>
+                <div>
+                    <span class="product-text-data">MRP (Incl. of all taxes)</span>
+                    <span class="product-text-data">₹{{product?.productPrice}}</span>
+                </div>
+                <div class="product-checkout-buttons">
+                    <button mat-raised-button style="color: var(--mat-blue);">Change Address</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="product-card-right-section component-card">
+            <div class="product-checkout-section">
+                <p class="component-card-title">Payment Method</p>
+                <div>
+                    <mat-radio-button [disabled]=true>UPI</mat-radio-button>
+                    <mat-radio-button [disabled]=true>EMI</mat-radio-button>
+                    <mat-radio-button [disabled]=true>Net Banking</mat-radio-button>
+                    <mat-radio-button>eCommerce Pay Balance</mat-radio-button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="product-card-right-section component-card">
+            <div class="product-checkout-section">
+                <p class="component-card-title">Price Breakup</p>
+                <div>
+                    <span class="product-text-data">MRP (Incl. of all taxes)</span>
+                    <span class="product-text-data">₹{{product?.productPrice}}</span>
+                </div>
+                <div>
+                    <span class="product-text-data">Discount</span>
+                    <span class="product-text-data">0</span>
+                </div>
+                <div>
+                    <span class="product-text-data">Final Price</span>
+                    <span class="product-text-data">₹{{product?.productPrice}}</span>
+                </div>
+                <div class="product-checkout-buttons">
+                    <button mat-raised-button style="color: var(--mat-blue);">Wishlist</button>
+                    <button mat-raised-button color="primary" >Buy</button>
+                </div>
+            </div>
+
+        </div>
+
+        <button mat-raised-button color="primary" class="checkout-button">Buy</button>
     </div>
 
 </div>
