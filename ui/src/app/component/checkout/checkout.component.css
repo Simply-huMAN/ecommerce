@@ -12,6 +12,13 @@
     margin: 0.25rem 0;
 }
 
+.product-title-section span{
+    font-size: 1.25em;
+    font-weight: 500;
+    margin: 0.25rem 0;
+
+}
+
 .product-checkout-buttons{
     margin: 0.25rem 0;
 }
