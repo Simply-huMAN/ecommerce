@@ -68,22 +68,26 @@
         <div class="product-card-right-section component-card">
             <div class="product-checkout-section">
                 <p class="component-card-title">Price Breakup</p>
-                <div>
+                <div style="display: flex; justify-content: space-between;">
                     <span class="product-text-data">MRP (Incl. of all taxes)</span>
                     <span class="product-text-data">₹{{product?.productPrice}}</span>
                 </div>
-                <div>
+                <div style="display: flex; justify-content: space-between;">
+                    <span class="product-text-data">Units</span>
+                    <span class="product-text-data">1</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
                     <span class="product-text-data">Discount</span>
                     <span class="product-text-data">0</span>
                 </div>
-                <div>
+                <div style="display: flex; justify-content: space-between;">
                     <span class="product-text-data">Final Price</span>
                     <span class="product-text-data">₹{{product?.productPrice}}</span>
                 </div>
-                <div class="product-checkout-buttons">
+                <!-- <div class="product-checkout-buttons">
                     <button mat-raised-button style="color: var(--mat-blue);">Wishlist</button>
                     <button mat-raised-button color="primary" >Buy</button>
-                </div>
+                </div> -->
             </div>
 
         </div>
