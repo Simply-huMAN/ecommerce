@@ -15,7 +15,7 @@
             <span class="product-title">{{product?.productName}}</span>
         </div>
 
-        <div class="product-card-right-section component-card">
+        <mat-card class="product-card-right-section component-card">
             <div class="product-checkout-section">
                 <p class="component-card-title">Product Details</p>
                 <div>
@@ -36,15 +36,12 @@
                 </div>
             </div>
 
-        </div>
+        </mat-card>
 
         <div class="product-card-right-section component-card">
             <div class="product-checkout-section">
                 <p class="component-card-title">Address</p>
-                <div>
-                    <span class="product-text-data">MRP (Incl. of all taxes)</span>
-                    <span class="product-text-data">₹{{product?.productPrice}}</span>
-                </div>
+                <p class="">204, Zolo Valor, Sainath nagar, Pune, Mahrashtra, India - 411014</p>
                 <div class="product-checkout-buttons">
                     <button mat-raised-button style="color: var(--mat-blue);">Change Address</button>
                 </div>

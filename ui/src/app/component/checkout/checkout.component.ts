@@ -7,7 +7,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { MatDivider } from '@angular/material/divider';
-import {MatRadioModule} from '@angular/material/radio';
+import { MatRadioModule } from '@angular/material/radio';
+// import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
@@ -16,7 +17,7 @@ import { CarouselComponent } from '../carousel/carousel.component';
 @Component({
   selector: 'app-checkout',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatDivider, MatProgressSpinnerModule, MatRadioModule],
+  imports: [CommonModule, MatButtonModule, MatDivider, MatProgressSpinnerModule, MatRadioModule, MatCardModule],
   templateUrl: './checkout.component.html',
   styleUrl: './checkout.component.css'
 })

@@ -2,7 +2,7 @@
     margin: 0.75rem 0;
     padding: 0.5rem 0.5rem;
     border-radius: 0.35em;
-    background: rgb(203, 202, 202);
+    /* background: rgb(203, 202, 202); */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -10,6 +10,10 @@
     font-size: 1.20em;
     font-weight: 500;
     margin: 0.25rem 0;
+}
+
+.product-title-section{
+    margin: 0.75rem 0.5rem;
 }
 
 .product-title-section span{
