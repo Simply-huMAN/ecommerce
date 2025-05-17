@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatCardModule } from '@angular/material/card';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule, RouterOutlet, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -7,7 +8,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterModule, MatSidenavModule, MatListModule],
+  imports: [CommonModule, RouterOutlet, RouterModule, MatCardModule, MatSidenavModule, MatListModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
