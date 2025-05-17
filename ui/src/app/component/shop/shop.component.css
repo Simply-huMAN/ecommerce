@@ -1,7 +1,8 @@
 .product-card-container{
-    display: flex;
-    flex-wrap: wrap;
-    /* background: red; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    margin-top: 0.5rem;
 }
 
 .product-card-filter-section{
@@ -16,11 +17,11 @@
 }
 
 .product-card{
-    /* background-color: green; */
-    display: flex;
-    width: 23%;
-    margin: 1rem 1%;
     padding: 0 0.5rem 0 0.5rem;
+}
+
+.product-card:hover{
+    cursor: pointer;
 }
 
 .product-card-header-section{
@@ -98,35 +99,23 @@ button{
     .product-card-filter-container{
         margin: 0.25rem;
     }
-    .product-card-filter-section{
-        /* position: relative; */
-        /* display: flex; */
-        /* padding: 0.25rem; */
-        /* margin: 0.25rem; */
-    }
-
-    /* .product-card{
-        width: 30%;
-    }   */
 }
 
 @media screen and (max-width: 900px){
-    .product-card{
-        width: 31%;
-    }  
+    .product-card-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media screen and (max-width: 720px){
-    .product-card{
-        width: 31%;
-    }  
+    .product-card-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-@media screen and (max-width: 430px){
-    .product-card{
-        width: 48%;
-        margin: 0.5rem auto;
-    }  
-    
+@media screen and (max-width: 330px){
+    .product-card-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 

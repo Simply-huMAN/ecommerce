@@ -51,7 +51,7 @@
         </div>
 
         <div class="product-card-container">
-            <mat-card *ngFor="let product of products" class="product-card">
+            <mat-card *ngFor="let product of products" class="product-card" [routerLink]="['/products', product.id]">
                 <mat-card-header>
                     <span *ngIf="product.productQuantity===0" class="out-of-stock">out of stock</span>
                     <img [attr.loading]="'eager'" [src]="product.productImages[0]" alt="product image" class="product-image" onerror="this.src='assets/fallback_image_24dp.svg';">
@@ -67,12 +67,12 @@
                     <mat-card-subtitle class="product-card-price">MRP (Incl. of all taxes) <span style="display: none;">₹{{product.productPrice}}</span></mat-card-subtitle>
                     <mat-card-title class="product-card-price"><span>₹ {{product.productPrice}}</span></mat-card-title>
                 </mat-card-content> -->
-                <mat-divider></mat-divider>
+                <!-- <mat-divider></mat-divider> -->
     
-                <mat-card-actions class="product-card-button-section">
+                <!-- <mat-card-actions class="product-card-button-section">
                     <button mat-raised-button style="color: var(--mat-blue);">Cart</button>
                     <button mat-raised-button color="primary" [routerLink]="['/products',product.id]">Buy</button>
-                </mat-card-actions>
+                </mat-card-actions> -->
             </mat-card>
         </div>
     </div>
