@@ -1,1 +1,109 @@
-<p>overview works!</p>
+<div>
+    <div class="overview-stats-section">
+        <!-- Customers data card -->
+        <mat-card class="component-card">
+            <mat-card-header class="card-header-section">
+                <mat-card-title>Customers</mat-card-title>
+                <mat-icon>groups</mat-icon>
+            </mat-card-header>
+            
+            <mat-card-subtitle class="card-content">45,320</mat-card-subtitle>
+            <mat-card-footer class="card-footer-section">
+                <span class="data-profit">+5.30%</span>
+                <mat-card-subtitle>Since last month</mat-card-subtitle>
+            </mat-card-footer>
+        </mat-card>
+
+        <!-- Orders data card -->
+        <mat-card class="component-card">
+            <mat-card-header class="card-header-section">
+                <mat-card-title>Orders</mat-card-title>
+                <mat-icon>shopping_cart</mat-icon>
+            </mat-card-header>
+            
+            <mat-card-subtitle class="card-content">45,320</mat-card-subtitle>
+            <mat-card-footer class="card-footer-section">
+                <span class="data-loss">-1.23%</span>
+                <mat-card-subtitle>Since last month</mat-card-subtitle>
+            </mat-card-footer>
+        </mat-card>
+        
+        <!-- Earnings data card -->
+        <mat-card class="component-card">
+            <mat-card-header class="card-header-section">
+                <mat-card-title>Earnings</mat-card-title>
+                <mat-icon>payments</mat-icon>
+            </mat-card-header>
+            
+            <mat-card-subtitle class="card-content">&#x20b9;7,524</mat-card-subtitle>
+            <mat-card-footer class="card-footer-section">
+                <span class="data-loss">-7.85%</span>
+                <mat-card-subtitle>Since last month</mat-card-subtitle>
+            </mat-card-footer>
+        </mat-card>
+
+        <!-- Growth data card -->
+        <mat-card class="component-card">
+            <mat-card-header class="card-header-section">
+                <mat-card-title>Growth</mat-card-title>
+                <mat-icon>trending_up</mat-icon>
+            </mat-card-header>
+            
+            <mat-card-subtitle class="card-content">+35.52%</mat-card-subtitle>
+            <mat-card-footer class="card-footer-section">
+                <span class="data-profit">+3.72%</span>
+                <mat-card-subtitle>Since last month</mat-card-subtitle>
+            </mat-card-footer>
+        </mat-card>
+        
+    </div>
+
+    <mat-card class="overview-event-log-section component-card">
+        <mat-card-header class="card-header-section">
+            <mat-card-title>Event Log</mat-card-title>
+            <mat-icon>event_note</mat-icon>
+        </mat-card-header>
+
+        <mat-card-content>
+            <div class="event-log-content">
+                <table mat-table [dataSource]="eventLogDataSource" matSort>
+                    <ng-container matColumnDef="datetime">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header>Date Time</th>
+                        <td mat-cell *matCellDef="let element">{{element.datetime}}</td>
+                    </ng-container>
+    
+                    <ng-container matColumnDef="customer">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header>Customer</th>
+                        <td mat-cell *matCellDef="let element">{{element.customer}}</td>
+                    </ng-container>
+    
+                    <ng-container matColumnDef="product">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header>Product</th>
+                        <td mat-cell *matCellDef="let element">{{element.product}}</td>
+                    </ng-container>
+    
+                    <ng-container matColumnDef="quantity">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header>Quantity</th>
+                        <td mat-cell *matCellDef="let element">{{element.quantity}}</td>
+                    </ng-container>
+    
+                    <ng-container matColumnDef="amount">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header>Amount</th>
+                        <td mat-cell *matCellDef="let element">&#x20b9;{{element.amount}}</td>
+                    </ng-container>
+    
+                    <tr mat-header-row *matHeaderRowDef="eventLogDisplayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: eventLogDisplayedColumns"></tr>
+    
+                    <tr class="mat-row" *matNoDataRow>
+                        <td class="mat-cell" colspan="5" style="text-align: center;">No data available</td>
+                    </tr>
+    
+                </table>
+    
+                <mat-paginator [pageSizeOptions]="[10, 25, 50, 100]" showFirstLastButtons aria-label="Select page of event logs"></mat-paginator>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
+
