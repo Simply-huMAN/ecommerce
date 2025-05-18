@@ -45,7 +45,7 @@ jobs:
 
       - name: Build Spring Boot app
         working-directory: ./ # adjust if your backend is in a subfolder
-        run: ./mvnw clean package -DskipTests
+        run: ./mvnw clean install -DskipTests
 
   build-angular:
     runs-on: ubuntu-latest
