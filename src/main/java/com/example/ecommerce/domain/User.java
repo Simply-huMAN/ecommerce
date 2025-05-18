@@ -25,6 +25,9 @@ public class User {
     private Wallet wallet;
     @ElementCollection
     private List<Address> addresses;
+    @ElementCollection(targetClass = Role.class)
+    @Enumerated(EnumType.STRING)
+    private List<Role> roles;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     private List<Product> purchaseHistory;

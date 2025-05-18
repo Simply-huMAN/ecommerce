@@ -1,6 +1,7 @@
 package com.example.ecommerce.dto;
 
 import com.example.ecommerce.domain.Address;
+import com.example.ecommerce.domain.Role;
 import com.example.ecommerce.domain.User;
 import com.example.ecommerce.domain.Wallet;
 import lombok.Data;
@@ -16,6 +17,7 @@ public class UserDTO {
     private String profilePicture;
     private Wallet wallet;
     private List<Address> addresses;
+    private List<Role> roles;
 
     public static UserDTO convertToDTO(User user){
         if(user==null) return null;
@@ -27,6 +29,7 @@ public class UserDTO {
         userDTO.setProfilePicture(user.getProfilePicture());
         userDTO.setWallet(user.getWallet());
         userDTO.setAddresses(user.getAddresses());
+        userDTO.setRoles(user.getRoles());
         return userDTO;
     }
 }
