@@ -101,41 +101,41 @@
 <!--					</execution>-->
 <!--				</executions>-->
 <!--			</plugin>-->
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>exec-maven-plugin</artifactId>
-				<version>3.1.0</version>
-				<executions>
+<!--			<plugin>-->
+<!--				<groupId>org.codehaus.mojo</groupId>-->
+<!--				<artifactId>exec-maven-plugin</artifactId>-->
+<!--				<version>3.1.0</version>-->
+<!--				<executions>-->
+<!--&lt;!&ndash;					<execution>&ndash;&gt;-->
+<!--&lt;!&ndash;						<id>install node and npm</id>&ndash;&gt;-->
+<!--&lt;!&ndash;						<goals>&ndash;&gt;-->
+<!--&lt;!&ndash;							<goal>install-node-and-npm</goal>&ndash;&gt;-->
+<!--&lt;!&ndash;						</goals>&ndash;&gt;-->
+<!--&lt;!&ndash;						<configuration>&ndash;&gt;-->
+<!--&lt;!&ndash;							<nodeVersion>v14.17.0</nodeVersion>&ndash;&gt;-->
+<!--&lt;!&ndash;							<npmVersion>6.14.13</npmVersion>&ndash;&gt;-->
+<!--&lt;!&ndash;						</configuration>&ndash;&gt;-->
+<!--&lt;!&ndash;					</execution>&ndash;&gt;-->
 <!--					<execution>-->
-<!--						<id>install node and npm</id>-->
+<!--						<id>npm install</id>-->
 <!--						<goals>-->
-<!--							<goal>install-node-and-npm</goal>-->
+<!--							<goal>npm</goal>-->
 <!--						</goals>-->
 <!--						<configuration>-->
-<!--							<nodeVersion>v14.17.0</nodeVersion>-->
-<!--							<npmVersion>6.14.13</npmVersion>-->
+<!--							<arguments>install</arguments>-->
 <!--						</configuration>-->
 <!--					</execution>-->
-					<execution>
-						<id>npm install</id>
-						<goals>
-							<goal>npm</goal>
-						</goals>
-						<configuration>
-							<arguments>install</arguments>
-						</configuration>
-					</execution>
-					<execution>
-						<id>npm run build</id>
-						<goals>
-							<goal>npm</goal>
-						</goals>
-						<configuration>
-							<arguments>run build</arguments>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
+<!--					<execution>-->
+<!--						<id>npm run build</id>-->
+<!--						<goals>-->
+<!--							<goal>npm</goal>-->
+<!--						</goals>-->
+<!--						<configuration>-->
+<!--							<arguments>run build</arguments>-->
+<!--						</configuration>-->
+<!--					</execution>-->
+<!--				</executions>-->
+<!--			</plugin>-->
 		</plugins>
 	</build>
 
