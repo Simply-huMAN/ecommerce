@@ -79,7 +79,7 @@ jobs:
 
   build-java:
     runs-on: ubuntu-latest
-    needds: build-angular
+    needs: build-angular
 
     services:
       docker:
