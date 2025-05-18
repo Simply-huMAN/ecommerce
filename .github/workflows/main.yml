@@ -128,13 +128,17 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build Docker image
-        run: |
-          docker build -t ghcr.io/${{ github.repository }}/ecommerce-app:latest .
+      - name: Check this out
+        run:
+          echo "This is deploy stage. Add your build and publish jobs for docker image."
 
-      - name: Push Docker image
-        run: |
-          docker push ghcr.io/${{ github.repository }}/ecommerce-app:latest
+#      - name: Build Docker image
+#        run: |
+#          docker build -t ghcr.io/${{ github.repository }}/ecommerce-app:latest .
+#
+#      - name: Push Docker image
+#        run: |
+#          docker push ghcr.io/${{ github.repository }}/ecommerce-app:latest
 
       # ---------- (Optional) Deploy ----------
       # Add your deployment steps here (e.g., to Kubernetes, ECS, etc.)
