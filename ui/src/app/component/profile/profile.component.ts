@@ -5,11 +5,13 @@ import { AuthService } from '../../service/auth.service';
 import { CommonModule } from '@angular/common';
 import { User } from '../../class/User';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [MatInputModule, FormsModule, CommonModule, MatButtonModule],
+  imports: [MatInputModule, FormsModule, CommonModule, MatCardModule, MatIcon, MatButtonModule],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css'
 })
